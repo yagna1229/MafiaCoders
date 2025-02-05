@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+{% load static %}
+
+{% block title %}
+Contact US
+{% endblock title %}
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'style/contact.css'%}">
+{% endblock style %}
+
+{% block content %}
+
+<div class="card-contact-container">
+    <div class="container">
+        <h1>Contatc US</h1>
+        <label>Name</label>
+        <input type="text" placeholder="Enter Your Name ....">
+        <label>Email</label>
+        <input type="email" placeholder="Enter Your Email ....">
+        <label>Phone</label>
+        <input type="phone" placeholder="Enter Your phone ....">
+        <label for="desc" id="descfield">Tell me about what you want to Contact us</label>
+        <textarea name="description" id="desc" rows="3"></textarea>
+        <button class="submit-btn">Submit</button>
+    </div>
+</div>
+
+
+{% block script %}
+<script src="{% static 'scripts/Contactscript.js'%}"></script>
+{% endblock script %}
+
+{% endblock content %}
+

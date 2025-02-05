@@ -1,0 +1,227 @@
+{% extends "layout.html" %}
+{% load static %}
+
+
+{% block title %}
+Events & SCheduling
+{% endblock title %}
+
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'style/styleevents.css'%}">
+{% endblock style %}
+
+
+{% block content %}
+
+<div class="main-body">
+    <div class="toggel-container">
+        <button class="toggle-btn" onclick="ToggleEvent()">☰</button>
+        <div class="content">
+            <div class="sidebar" id="sidebar">
+                <h1>Alerts</h1>
+                <div class="message_alert_container">
+                    <div class="alert-message">
+                        This is alert message
+                    </div>
+                    <div class="alert-message">
+                        This is alert message
+                    </div>
+                    <div class="alert-message">
+                        This is alert message
+                    </div>
+                    <div class="alert-message">
+                        This is alert message
+                    </div>
+                    <div class="alert-message">
+                        This is alert message
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="container">
+                <div class="event-boxes">
+                    <div class="box">
+                        <h1>Event-name</h1>
+                        <h2>Event-Description</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, laudantium accusamus!
+                            Laboriosam molestiae tempore sed esse sint maxime quas facere incidunt. Ad voluptates
+                            mollitia dignissimos! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic
+                            doloribus, iure cumque assumenda corrupti laborum! Reiciendis quia nulla non laboriosam
+                            ea facilis, mollitia sapiente quo.</p>
+                        <div class="box-btn">
+                             <button class="btn-monitor">Monitor</button>
+                            <button class="btn-details">Details</button>
+                            <button class="btn-remove">Remove</button>
+                        </div>
+
+                    </div>
+                    <div class="box">
+                        <h1>Event-name</h1>
+                        <h2>Event-Description</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, laudantium accusamus!
+                            Laboriosam molestiae tempore sed esse sint maxime quas facere incidunt. Ad voluptates
+                            mollitia dignissimos! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic
+                            doloribus, iure cumque assumenda corrupti laborum! Reiciendis quia nulla non laboriosam
+                            ea facilis, mollitia sapiente quo.</p>
+                        <div class="box-btn">
+                             <button class="btn-monitor">Monitor</button>
+                            <button class="btn-details">Details</button>
+                            <button class="btn-remove">Remove</button>
+                        </div>
+
+                    </div>
+                    <div class="box">
+                        <h1>Event-name</h1>
+                        <h2>Event-Description</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, laudantium accusamus!
+                            Laboriosam molestiae tempore sed esse sint maxime quas facere incidunt. Ad voluptates
+                            mollitia dignissimos! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic
+                            doloribus, iure cumque assumenda corrupti laborum! Reiciendis quia nulla non laboriosam
+                            ea facilis, mollitia sapiente quo.</p>
+                        <div class="box-btn">
+                             <button class="btn-monitor">Monitor</button>
+                            <button class="btn-details">Details</button>
+                            <button class="btn-remove">Remove</button>
+                        </div>
+
+                    </div>
+                    <div class="box">
+                        <h1>Event-name</h1>
+                        <h2>Event-Description</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, laudantium accusamus!
+                            Laboriosam molestiae tempore sed esse sint maxime quas facere incidunt. Ad voluptates
+                            mollitia dignissimos! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic
+                            doloribus, iure cumque assumenda corrupti laborum! Reiciendis quia nulla non laboriosam
+                            ea facilis, mollitia sapiente quo.</p>
+                        <div class="box-btn">
+                             <button class="btn-monitor">Monitor</button>
+                            <button class="btn-details">Details</button>
+                            <button class="btn-remove">Remove</button>
+                        </div>
+
+                    </div>
+                    <div class="box">
+                        <h1>Event-name</h1>
+                        <h2>Event-Description</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, laudantium accusamus!
+                            Laboriosam molestiae tempore sed esse sint maxime quas facere incidunt. Ad voluptates
+                            mollitia dignissimos! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic
+                            doloribus, iure cumque assumenda corrupti laborum! Reiciendis quia nulla non laboriosam
+                            ea facilis, mollitia sapiente quo.</p>
+                        <div class="box-btn">
+                             <button class="btn-monitor">Monitor</button>
+                            <button class="btn-details">Details</button>
+                            <button class="btn-remove">Remove</button>
+                        </div>
+
+                    </div>
+                    <div class="box">
+                        <h1>Event-name</h1>
+                        <h2>Event-Description</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, laudantium accusamus!
+                            Laboriosam molestiae tempore sed esse sint maxime quas facere incidunt. Ad voluptates
+                            mollitia dignissimos! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic
+                            doloribus, iure cumque assumenda corrupti laborum! Reiciendis quia nulla non laboriosam
+                            ea facilis, mollitia sapiente quo.</p>
+                        <div class="box-btn">
+                             <button class="btn-monitor">Monitor</button>
+                            <button class="btn-details">Details</button>
+                            <button class="btn-remove">Remove</button>
+                        </div>
+
+                    </div>
+                    <div class="box">
+                        <h1>Event-name</h1>
+                        <h2>Event-Description</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, laudantium accusamus!
+                            Laboriosam molestiae tempore sed esse sint maxime quas facere incidunt. Ad voluptates
+                            mollitia dignissimos! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic
+                            doloribus, iure cumque assumenda corrupti laborum! Reiciendis quia nulla non laboriosam
+                            ea facilis, mollitia sapiente quo.</p>
+                        <div class="box-btn">
+                             <button class="btn-monitor">Monitor</button>
+                            <button class="btn-details">Details</button>
+                            <button class="btn-remove">Remove</button>
+                        </div>
+
+                    </div>
+                    <div class="box">
+                        <h1>Event-name</h1>
+                        <h2>Event-Description</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, laudantium accusamus!
+                            Laboriosam molestiae tempore sed esse sint maxime quas facere incidunt. Ad voluptates
+                            mollitia dignissimos! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic
+                            doloribus, iure cumque assumenda corrupti laborum! Reiciendis quia nulla non laboriosam
+                            ea facilis, mollitia sapiente quo.</p>
+                        <div class="box-btn">
+                             <button class="btn-monitor">Monitor</button>
+                            <button class="btn-details">Details</button>
+                            <button class="btn-remove">Remove</button>
+                        </div>
+
+                    </div>
+                    <div class="box">
+                        <h1>Event-name</h1>
+                        <h2>Event-Description</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, laudantium accusamus!
+                            Laboriosam molestiae tempore sed esse sint maxime quas facere incidunt. Ad voluptates
+                            mollitia dignissimos! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic
+                            doloribus, iure cumque assumenda corrupti laborum! Reiciendis quia nulla non laboriosam
+                            ea facilis, mollitia sapiente quo.</p>
+                        <div class="box-btn">
+                            <button class="btn-monitor">Monitor</button>
+                            <button class="btn-details">Details</button>
+                            <button class="btn-remove">Remove</button>
+                        </div>
+
+                    </div>
+                    <div class="box">
+                        <h1>Event-name</h1>
+                        <h2>Event-Description</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, laudantium accusamus!
+                            Laboriosam molestiae tempore sed esse sint maxime quas facere incidunt. Ad voluptates
+                            mollitia dignissimos! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic
+                            doloribus, iure cumque assumenda corrupti laborum! Reiciendis quia nulla non laboriosam
+                            ea facilis, mollitia sapiente quo.</p>
+                        <div class="box-btn">
+                             <button class="btn-monitor">Monitor</button>
+                            <button class="btn-details">Details</button>
+                            <button class="btn-remove">Remove</button>
+                        </div>
+
+                    </div>
+                    
+                    <div class="box">
+                        <h1>Event-name</h1>
+                        <h2>Event-Description</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, laudantium accusamus!
+                            Laboriosam molestiae tempore sed esse sint maxime quas facere incidunt. Ad voluptates
+                            mollitia dignissimos! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic
+                            doloribus, iure cumque assumenda corrupti laborum! Reiciendis quia nulla non laboriosam
+                            ea facilis, mollitia sapiente quo.</p>
+                        <div class="box-btn">
+                             <button class="btn-monitor">Monitor</button>
+                            <button class="btn-details">Details</button>
+                            <button class="btn-remove">Remove</button>
+                        </div>
+
+                        
+                    
+                    
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% block script %}
+<script src="{% static 'scripts/script.js'%}"></script>
+{% endblock script %}
+
+{% endblock content %}
+

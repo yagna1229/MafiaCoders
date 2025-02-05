@@ -1,0 +1,198 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.body{
+    display: flex;
+    position: relative;
+}
+
+.main-body{
+    display: flex;
+
+}
+.container{
+    /* border: 2px solid black; */
+    width: 95vw;
+    height:auto;
+  font-family: sans-serif;
+}
+
+.content{
+    display: flex;
+}
+
+
+/* Toggel Styling */
+.message_alert_container{
+    display: flex;
+    flex-direction: column;
+}
+.alert-message{
+    height: auto;
+    width: 200px;
+    color: white;
+    padding: 20px 0px;
+    /* border: 2px solid black; */
+    margin: 10px 22px;
+    border-radius:5px;
+    background-color: cadetblue;
+}
+.sidebar h1{
+    font-family: sans-serif;
+    letter-spacing: 2px;
+    text-align: center;
+    color: red;
+    text-shadow: 2px 1px 1px rgb(10, 10, 10);
+}
+.sidebar{
+    background-color: rgb(104, 230, 188);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: -252px;
+    padding-top:50px ;
+    width:250px;
+    border:none;
+    animation: 0.5s ease-in-out  forwards;
+ }
+ 
+ /* When the sidebar is toggled to open */
+.sidebar.open {
+    animation-name: sidebar-animation-in;
+}
+
+/* When the sidebar is toggled to close */
+.sidebar.closed {
+    animation-name: sidebar-animation-out;
+}
+
+@keyframes sidebar-animation-in{
+    
+        from{
+            left:-250px
+        }
+        to{
+            left:0px
+        }
+    
+     
+}
+@keyframes sidebar-animation-out{
+    
+        from{
+            left:0px
+        }
+        to{
+            left:-252px;
+        }
+    
+     
+}
+
+.toggle-btn{
+    /* border: 2px solid black; */
+    width:40px;
+    height: 40px;
+    background-color: #333;
+    color: white;
+    border-radius: 5px;
+    position: fixed;
+    cursor: pointer;
+    top: 10px;
+    left: 10px;
+    z-index: 1100;
+
+
+} 
+
+/* content for when sidebar functioning */
+/* Content adjustment when sidebar is opened */
+.main-content {
+    
+    margin-left: 15px;
+    display: flex;
+    justify-content: center;
+    transition: margin-left 0.5s ease-in-out;
+    padding: 20px;
+    flex-grow: 1;
+}
+
+/* Move the content to the right when the sidebar opens */
+.main-content.shifted {
+    margin-left: 250px; /* Same width as sidebar */
+}
+
+.event-boxes{
+   
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+/* Grid boxes */
+.box{
+    background-color: beige;
+    border-radius: 15px;
+    border: 1px solid black;
+    padding: 20px;
+    width: auto;
+    height: 500px;
+    margin: 10px;
+
+    
+}
+
+.box:hover{
+  
+    box-shadow: 5px 5px 20px 8px gray;;
+    background-color: beige; /* Color when hovering */
+  
+}
+
+.box h1{
+    font-size: 45px;
+    margin: 10px;
+    text-align: center;
+}
+
+.box p{
+    font-size: 25px;
+    
+}
+
+.box h2{
+    margin: 35px 0px;
+}
+.btn-monitor{
+    margin: 15px 0px;
+    background-color: rgb(128, 221, 51);
+    color: white;
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+.btn-details{
+    margin: 15px 0px;
+    background-color: rgb(110, 101, 235);
+    color: white;
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+.btn-remove{
+    margin: 15px 0px;
+    background-color: rgb(221, 53, 53);
+    color: white;
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    cursor: pointer;
+}

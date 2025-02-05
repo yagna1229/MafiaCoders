@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title> {% block title %}{% endblock title %}</title>
+   {% comment %} <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" /> {% endcomment %}
+   <link rel="stylesheet" href="{% static 'style/script.css'%}">
+   {% block style %}
+   {% endblock style %}
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                {% comment %} <li><a href="">Home</a></li>
+                <li><a href="{% url "events" %}">EventsPortal</a></li>
+                <li><a href="">About US</a></li>
+                <li><a href="">Contact US</a></li> {% endcomment %}
+
+              
+                    <li><a href="{% url 'home'%}" class="home a">Home</a></li>
+                    <li><a href="{% url 'events'%}" class="management a">Management</a></li>
+                    <li><a href="{% url 'aboutus'%}" class="aboutus a">About Us</a></li>
+                    <li><a href="{% url 'contact'%}" class="contectus a">Contact Us</a></li>      
+            </ul>
+          
+        </nav>
+    </header>
+
+   
+    
+    {% block content %}
+    
+    
+    
+    {% endblock content %}
+    <footer>
+        <div class="foot">
+            
+            <p>Crowd Manager</p>
+            <img src="image.jpg" alt="image" height="50px" width="50px" >
+         </div> 
+     </footer>
+{% block script %}{% endblock script %}
+</body>
+</html>
