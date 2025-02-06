@@ -6,18 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title> {% block title %}{% endblock title %}</title>
    {% comment %} <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" /> {% endcomment %}
-   <link rel="stylesheet" href="{% static 'style/script.css'%}">
+   <link rel="stylesheet" href="{% static 'style/scriptnew.css'%}">
    {% block style %}
    {% endblock style %}
 </head>
 <body>
-    <header>
+    {% comment %} <header>
         <nav>
             <ul>
-                {% comment %} <li><a href="">Home</a></li>
-                <li><a href="{% url "events" %}">EventsPortal</a></li>
-                <li><a href="">About US</a></li>
-                <li><a href="">Contact US</a></li> {% endcomment %}
+              
 
               
                     <li><a href="{% url 'home'%}" class="home a">Home</a></li>
@@ -27,7 +24,24 @@
             </ul>
           
         </nav>
+    </header> {% endcomment %}
+    <header>
+        <div class="foot">
+            <img class="logo" src="TATTOO (1).png" alt="Error" height="" width="">
+            <div class="pname">CrowdManager</div>
+        </div>
+        <nav>
+            <a href="{% url 'home'%}" class="home a">Home</a>
+            <a href="{% url 'events'%}" class="management a">Management</a>
+            <a href="{% url 'aboutus'%}" class="aboutus a">About Us</a>
+            <a href="{% url 'contact'%}" class="contectus a">Contact Us</a>
+            <!-- <button class="a">button</button> -->
+        </nav>
+
     </header>
+   
+ 
+    
 
    
     
@@ -36,13 +50,31 @@
     
     
     {% endblock content %}
-    <footer>
+
+    {% comment %} <footer>
         <div class="foot">
             
             <p>Crowd Manager</p>
             <img src="image.jpg" alt="image" height="50px" width="50px" >
          </div> 
-     </footer>
+     </footer> {% endcomment %}
+
+     {% comment %} new footer 5 feb {% endcomment %}
+     <footer>
+        <div class="social">social</div>
+        <div class="icons">
+        <img class="symbol youtube"
+            src="icons8-youtube-50.png" alt="YouTube" border="0"
+            height="30px" width="30x">
+        <!-- <img class="symbol youtube" src="Free download _ HD PNG youtube logo png - Image ID 474247 _.jpeg" alt=""  height="70px" width="70px"> -->
+        <img class="symbol Instagram" src="icons8-instagram-64.png"
+            alt="" height="30px" width="30px">
+            <img class="symbol whatsapp" src="icons8-whatsapp-50.png" alt="" height="30px" width="30px">
+        <img class="symbol github" src="github.png" alt="" height="30px" width="30px">
+    </div>
+        
+
+    </footer>
 {% block script %}{% endblock script %}
 </body>
 </html>

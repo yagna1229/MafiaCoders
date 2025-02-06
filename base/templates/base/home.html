@@ -1,15 +1,30 @@
 {% extends "layout.html" %}
+{% load static %}
 
 
 {% block title %}
 HomePage
 {% endblock title %}
 
+{% block style %}
+<link rel="stylesheet" href="{% static 'style/monitor.css'%}">
+{% endblock style %}
+
+    
+
 
 
 
 {% block content %}
 
+<main>
+    <div class="com">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora, corporis!
+    </div>
+    <div class="view">
+<video src="video.mp4" class="live" controls ></video>
+    </div>
+</main>
 
 {% endblock content %}
 
