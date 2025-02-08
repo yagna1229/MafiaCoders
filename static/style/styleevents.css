@@ -14,7 +14,7 @@
 }
 .container{
     /* border: 2px solid black; */
-    width: 95vw;
+    width: auto;
     height:auto;
   font-family: sans-serif;
 }
@@ -70,15 +70,102 @@
 
 @keyframes sidebar-animation-in{
     
+    
         from{
             left:-250px
         }
         to{
             left:0px
         }
-    
+        
      
 }
+.event-boxes{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+/* Grid boxes */
+.box{
+    background-color: beige;
+    border-radius: 15px;
+    border: 1px solid black;
+    padding: 20px;
+    width: auto;
+    height: 500px;
+    margin: 10px;
+
+    
+}
+.main-content {
+    
+    /* margin-left: 15px; */
+    width: auto;
+    display: flex;
+    justify-content: center;
+    transition: margin-left 0.5s ease-in-out;
+    padding: 20px;
+    flex-grow: 1;
+}
+@media only screen and (max-width:1655px){
+    .event-boxes{
+        grid-template-columns: 1fr 1fr;
+        
+    }
+    .box{
+        width: auto;
+        height: auto;
+    }
+
+}
+@media only screen and (max-width:1055px){
+    .event-boxes{
+        grid-template-columns: 1fr ;
+        
+    }
+    .box{
+        width: auto;
+        height: auto;
+    }
+
+}
+
+@media only screen and (max-width:748px){
+    .main-content{
+        /* margin: 57px;    */
+        width: 100vw;
+    }
+
+    header{
+        width: 100%;
+    }
+
+    .container{
+        width: auto;
+    }
+    
+    .event-boxes{
+        /* margin: 50px; */
+        grid-template-columns: 1fr ;
+        
+    }
+    .main-body{
+        justify-content: center;
+    }
+    .box{
+        /* margin-left: 4px; */
+        width: auto;
+        height: auto;
+    }
+
+}
+
+@media only screen and (max-width:400px){
+    .box{
+        width: 450px;
+        height: auto;
+    }
+}
+
 @keyframes sidebar-animation-out{
     
         from{
@@ -109,38 +196,15 @@
 
 /* content for when sidebar functioning */
 /* Content adjustment when sidebar is opened */
-.main-content {
-    
-    margin-left: 15px;
-    display: flex;
-    justify-content: center;
-    transition: margin-left 0.5s ease-in-out;
-    padding: 20px;
-    flex-grow: 1;
-}
+
 
 /* Move the content to the right when the sidebar opens */
 .main-content.shifted {
     margin-left: 250px; /* Same width as sidebar */
 }
 
-.event-boxes{
-   
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-}
-/* Grid boxes */
-.box{
-    background-color: beige;
-    border-radius: 15px;
-    border: 1px solid black;
-    padding: 20px;
-    width: auto;
-    height: 500px;
-    margin: 10px;
 
-    
-}
+
 
 .box:hover{
   
