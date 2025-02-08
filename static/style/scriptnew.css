@@ -100,15 +100,26 @@ footer {
 }
 .social{
     color: black;
-    margin-left: 85.3%;
     display: flex;
-    align-items: center;
+    flex-direction: column;
     font-size: 1.5em;
     
 }
 .icons{
+    margin: 15px 0px;
+    gap: 15px;
     display: flex;
-    align-items: center;
-    justify-content: flex-end;
     margin-bottom:1%;
 }
+
+.social-media{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.icons svg{
+    cursor: pointer;
+}
+
+
+
