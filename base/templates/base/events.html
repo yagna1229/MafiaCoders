@@ -13,7 +13,11 @@ Events & SCheduling
 
 
 {% block content %}
-
+<div class="createEventbtn">
+    <a href={%url 'creatEvent'%}>
+    <button calss="create-btn btn-monitor">Create&nbsp;Event</button>
+    </a>
+</div>
 <div class="main-body">
     <div class="toggel-container">
         <button class="toggle-btn" onclick="ToggleEvent()">☰</button>
@@ -43,7 +47,7 @@ Events & SCheduling
             <div class="container">
                 <div class="event-boxes">
                     <div class="box">
-                        <h1>Event-name</h1>
+                        <h1>Event-name1</h1>
                         <h2>Event-Description</h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, laudantium accusamus!
                             Laboriosam molestiae tempore sed esse sint maxime quas facere incidunt. Ad voluptates
@@ -51,9 +55,13 @@ Events & SCheduling
                             doloribus, iure cumque assumenda corrupti laborum! Reiciendis quia nulla non laboriosam
                             ea facilis, mollitia sapiente quo.</p>
                         <div class="box-btn">
-                             <button class="btn-monitor">Monitor</button>
+                            {% if request.user.is_authenticated %}
+                            <a href="{%url 'home'%}">
+                             <button href class="btn-monitor">Monitor</button>
+                            </a>
                             <button class="btn-details">Details</button>
                             <button class="btn-remove">Remove</button>
+                            {% endif %}
                         </div>
 
                     </div>

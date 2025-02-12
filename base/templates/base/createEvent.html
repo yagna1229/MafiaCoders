@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+{% load static %}
+
+
+{% block title %}
+Event-creation
+{% endblock title %}
+
+{% block style %}
+
+{% endblock style %}
+
+    
+
+
+
+
+{% block content %}
+<div>
+    <form method="POST" action="">
+        {% csrf_token %}
+
+        {{form.as_p}}
+        <button type="submit">Submit</button>
+        
+    </form>
+</div>
+
+
+
+
+
+{% endblock content %}
+
+
+

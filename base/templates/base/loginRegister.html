@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+{% load static %}
+
+
+{% block title %}
+Login-Signup
+{% endblock title %}
+
+{% block style %}
+
+{% endblock style %}
+
+    
+
+
+
+
+{% block content %}
+
+
+{% if page == 'login' %}
+    <div>
+        <form method="POST" action="">
+            {% csrf_token %}
+            <h1>Login</h1>
+            <lable>Username</lable>
+            <input type="text" name="username" placeholder="Enter Username">
+            <lable>Password</input>        
+            <input type="password" name="password" placeholder="Enter Password here">
+
+            <button>Submit</button>
+        </form>
+        <hr>
+        <p>Have not signup yet?</p>
+        <a href={% url "register" %}>Signup</a>
+    </div>
+{% else %}
+    <div>
+        <form method="POST" action="">
+            {% csrf_token %}
+            <h1>Register</h1>
+            {{form.as_p}}
+
+            <input type="submit" value="register" />
+            <hr>
+            <p>Already signup</p>
+            <a href="{% url "login" %}">Login</a>
+        </form>
+    </div>
+
+
+
+
+
+
+{% endif %}
+{% endblock content %}
+
+
+
